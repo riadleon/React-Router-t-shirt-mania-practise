@@ -1,14 +1,18 @@
 import React from 'react';
 
 const Cart = ({ cart }) => {
-    console.log(cart);
     return (
-        <div>
+        <div style={{ height: "100vh", position: "fixed", top: 0 }}>
             <h2>Order Summary :</h2>
-            <h5>Order Quantity: {cart.length}</h5>
-
-
-        </div>
+            <h5>Order Quantity:</h5>
+            {
+                cart.map(tshirt => <p
+                    key={tshirt._id}
+                >
+                    {tshirt.name}
+                </p>)
+            }
+        </div >
     );
 };
 
