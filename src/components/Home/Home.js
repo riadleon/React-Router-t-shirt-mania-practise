@@ -6,7 +6,7 @@ import './Home.css'
 
 const Home = () => {
     const tshirts = useLoaderData();
-    const { cart, setCart } = useState([]);
+    const [cart, setCart] = useState([]);
 
     const handleAddToCart = tshirt => {
         const exists = cart.find(ts => ts._id === tshirt._id);
